@@ -17,6 +17,11 @@ int luaopen_init(lua_State *L) {
           name = 'catppuccin',
           opts = {
             color_overrides = {
+            /*   mocha = { */
+            /*     base = '#1b1424', */
+            /*     mantle = '#000000', */
+            /*     crust = '#202252', */
+            /*   }, */
             },
           }
         },

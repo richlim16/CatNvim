@@ -36,6 +36,7 @@ int luaopen_config_keymaps() {
   // telescope
   map("n", "<leader>fd", ":Telescope find_files <CR>");
   map("n", "<leader>fw", ":Telescope live_grep <CR>");
+  map("n", "gd", ":Telescope lsp_definitions <CR>");
 
   return 1;
 }
