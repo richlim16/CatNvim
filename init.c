@@ -17,18 +17,21 @@ int luaopen_init(lua_State *L) {
           name = 'catppuccin',
           opts = {
             color_overrides = {
-              mocha = {
-                base = '#000000',
-                mantle = '#000000',
-                crust = '#000000',
-              },
             },
           }
         },
         {
+          "folke/tokyonight.nvim",
+          name = 'tokyonight',
+          lazy = false,
+          priority = 1000,
+        },
+
+        {
           'LazyVim/LazyVim',
           import = 'lazyvim.plugins',
-          opts = { colorscheme = 'catppuccin' }
+          // opts = { colorscheme = 'catppuccin' }
+          opts = { colorscheme = 'tokyonight' }
         }
       },
       install = {
