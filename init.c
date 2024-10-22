@@ -2,11 +2,11 @@
 
 int luaopen_init(lua_State *L) {
   char *lazypath = concat_str(get_xdg_home(1), "/lazy/lazy.nvim/");
-  if (os_isdir(lazypath) == false) {
-    system(concat_str("git clone --filter=blob:none "
-                      "https://github.com/folke/lazy.nvim.git --branch=stable ",
-                      lazypath));
-  }
+  // if (os_isdir(lazypath) == false) {
+  //   system(concat_str("git clone --filter=blob:none "
+  //                     "https://github.com/folke/lazy.nvim.git --branch=stable
+  //                     ", lazypath));
+  // }
   opt("runtimepath", runtimepath_default(false), lazypath);
   // clang-format off
   require_setup("lazy", LUA_TABLE(
@@ -37,7 +37,12 @@ int luaopen_init(lua_State *L) {
           import = 'lazyvim.plugins',
           // opts = { colorscheme = 'catppuccin' }
           opts = { colorscheme = 'tokyonight' }
-        }
+        },
+
+        {
+          'mg979/vim-visual-multi',
+          lazy = false,
+        },
       },
       install = {
         colorscheme = { 'catppuccin' }

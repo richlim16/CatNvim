@@ -29,7 +29,6 @@ int luaopen_config_keymaps() {
   map("n", "<A-l>", "<C-w>5>");
   map("n", "<A-s-h>", "<c-w>-");
   map("n", "<A-s-l>", "<c-w>+");
-
   // nvimtree
   map("n", "<C-n>", ":Neotree toggle<CR>");
 
